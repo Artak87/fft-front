@@ -1,0 +1,6 @@
+{
+  "name": "ttf-front",
+  "dependencies": {
+    "semantic": "semantic-ui#^2.2.4"
+  }
+}
