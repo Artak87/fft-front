@@ -41,6 +41,7 @@
     "zone.js": "^0.6.23",
 
     "angular2-in-memory-web-api": "0.0.20",
+    "angular2-jwt": "*",
     "bower": "*"
   },
   "devDependencies": {

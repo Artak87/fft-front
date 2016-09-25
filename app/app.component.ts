@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
+import { Auth } from './auth.service';
 
 @Component({
     selector: 'ttf-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    providers: [ Auth ],
+    template: '<landing-page></landing-page>'
 })
-export class AppComponent { }
+export class AppComponent {
+	constructor(private auth: Auth) {}
+}
