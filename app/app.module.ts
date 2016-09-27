@@ -6,13 +6,22 @@ import { AppComponent }          from './app.component';
 import { LandingPageComponent }  from './landing-page.component';
 import { FooterComponent }       from './footer.component';
 
+import { DashboardComponent }       from './dashboard.component';
+import { DashboardMenuComponent }   from './dashboard-menu.component';
+import { DashboardBodyComponent }   from './dashboard-body.component';
+import { DashboardFooterComponent } from './dashboard-footer.component';
 
 @NgModule({
   imports: [ BrowserModule ],
-  declarations: [ 
+  declarations: [
   	AppComponent,
   	FooterComponent,
   	LandingPageComponent,
+
+    DashboardComponent,
+    DashboardMenuComponent,
+    DashboardBodyComponent,
+    DashboardFooterComponent,
   ],
   providers: [
   	AUTH_PROVIDERS,
