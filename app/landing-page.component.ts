@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Auth } from './auth.service';
+import { AuthService } from './auth.service';
 
 @Component({
     selector: 'landing-page',
-    providers: [ Auth ],
+    providers: [ AuthService ],
     styles:	[
     `
     .masthead.segment {
@@ -58,7 +58,8 @@ import { Auth } from './auth.service';
       	Fan Football Training tool
       </h1>
       <h2>We make a tool which helps you to organize football's trainings.</h2>
-      <div class="ui huge olive button" (click)="auth.login()">Get Started <i class="right arrow icon"></i></div>
+      <div class="ui huge olive button" (click)="auth.login()" *ngIf="!auth.authenticated()">Join</div>
+      <div class="ui huge olive button" (click)="auth.login()" *ngIf="auth.authenticated()">Go to Board <i class="right arrow icon"></i></div>
   </div>
 
   </div>
@@ -89,5 +90,5 @@ import { Auth } from './auth.service';
 `
 })
 export class LandingPageComponent {
-	constructor(private auth: Auth) {}
+	constructor(private auth: AuthService) {}
 }

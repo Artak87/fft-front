@@ -1,32 +1,33 @@
 import { Injectable }      from '@angular/core';
 import { tokenNotExpired } from 'angular2-jwt';
-import { config } from './app.config';
+import { config }          from './app.config';
 
 // Avoid name not found warnings
 declare var Auth0Lock: any;
 
 @Injectable()
-export class Auth {
-  // Configure Auth0
-  lock = new Auth0Lock(
+export class AuthService {
+  private lock = new Auth0Lock(
     config.auth.clientID,
     config.auth.domain,
     {
       // redirect: false,
       socialButtonStyle: 'small',
       theme: {
-        logo: "",
+        logo: '',
         primaryColor: '#b5cc18',
       },
       languageDictionary: {
-        title: "FFT",
+        title: 'FFT',
       }
     }
   );
+  
+  public redirectUrl:string;
 
   constructor() {
     // Add callback for lock `authenticated` event
-    this.lock.on("authenticated", (authResult:any) => {
+    this.lock.on('authenticated', (authResult:any) => {
       localStorage.setItem('id_token', authResult.idToken);
     });
   }
