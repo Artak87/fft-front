@@ -15,7 +15,7 @@ import { DashboardBodyComponent }   from './dashboard-body.component';
 import { DashboardFooterComponent } from './dashboard-footer.component';
 
 @NgModule({
-  imports: [ 
+  imports: [
     BrowserModule,
     routing,
   ],

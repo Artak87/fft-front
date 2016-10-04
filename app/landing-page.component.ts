@@ -59,7 +59,7 @@ import { AuthService } from './auth.service';
       </h1>
       <h2>We make a tool which helps you to organize football's trainings.</h2>
       <div class="ui huge olive button" (click)="auth.login()" *ngIf="!auth.authenticated()">Join</div>
-      <div class="ui huge olive button" (click)="auth.login()" *ngIf="auth.authenticated()">Go to Board <i class="right arrow icon"></i></div>
+      <a href="board" class="ui huge olive button" *ngIf="auth.authenticated()">Go to Board <i class="right arrow icon"></i></a>
   </div>
 
   </div>
