@@ -1,11 +1,11 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LandingPageComponent } from './landing-page.component';
-import { DashboardComponent }   from './dashboard.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { DashboardComponent }   from './dashboard/dashboard.component';
 
-import { AuthGuard }   from './auth-guard.service';
-import { AuthService }   from './auth.service';
+import { AuthGuard }   from './app-helper/auth-guard.service';
+import { AuthService } from './app-helper/auth.service';
 
 const appRoutes: Routes = [
   {

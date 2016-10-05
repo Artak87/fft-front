@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from './auth.service';
+import { AuthService } from './app-helper/auth.service';
 
 @Component({
     selector: 'ttf-app',
